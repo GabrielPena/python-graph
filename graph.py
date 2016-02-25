@@ -22,6 +22,9 @@ class Vertex(object):
     def AddEdge(self, vertex, w = 0):
         self.edges.append(Edge(self, vertex, w))
 
+    def __eq__(self, other):
+        return True if self.source == other.source and self.sink == other.sink and self.weight == other.weight else False
+
 
 class Graph(object):
     def __init__(self):
@@ -32,7 +35,9 @@ class Graph(object):
         self.vertices.append(vertex)
 
     def AddEdge(self, source, sink):
-        pass
+        sour = None
+        sin = None
+
 
     def BFS(self, source):
         pass
